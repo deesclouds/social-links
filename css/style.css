@@ -10,12 +10,9 @@
     overscroll-behavior: none;
 }
 
-html{
-    background-color: blueviolet;
+html, body{
     background-image:  url('../public/images/brand-background-01.png');
-    background-repeat: repeat;
     background-position: center;
-    background-attachment: fixed;
 }
 
 #avatar{
