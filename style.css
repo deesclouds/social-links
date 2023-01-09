@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+html{
+    background-color: blueviolet;
+    background-image:  url('Pink-holiday-sky-wallpapers-hd.jpg');
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#avatar{
+border-radius: 5rem;
+height: 10rem;
+width: auto;
+}
+
+h1, title, button, button:visited {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    margin: 0.6rem;
+    text-decoration: none;
+    color: white;
+    width: 15rem;
+    background-color: #30B0D8;
+    border-radius: 5rem;
+    box-shadow: 4px 4px #E83E31;
+}
+    
+button:hover {
+    background-color: #E83E31;
+    box-shadow: 4px 4px #30B0D8;
+    transition: 0.5s;
+    cursor: pointer;
+}
+    
+
+
