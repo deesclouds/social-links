@@ -11,7 +11,7 @@
 
 html{
     background-color: blueviolet;
-    background-image:  url('Pink-holiday-sky-wallpapers-hd.jpg');
+    background-image:  url('../public/images/brand-background-01.png');
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
