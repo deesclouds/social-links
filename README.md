@@ -2,7 +2,7 @@
 
 ## Description: 
 This is a simple project that displays links to various social media profiles.
-
+Project is live [here](https://deesclouds-social-links.netlify.app/)
 ### Installation:
 To use this project, simply clone the repo and open `index.html` into your web browser.
 
