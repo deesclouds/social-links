@@ -23,8 +23,16 @@ You can customize the look and feel of the link by editing the CSS file in `css/
 
 ### Credits:
 This project was created by deesclouds.
+Inspired to build this project by reading Izzy's blog post [here](https://izayevisuals.hashnode.dev/make-your-own-linktree).
 
 ### License:
 This project is licensed under the MIT License. See `LICENSE` for more details.
 
 
+### Resources:
+
+These are some of the resources that I used when building this project that could be helpful with building your next project.
+
+[Color Picker From Image](https://colorpickerfromimage.com/) - helped me to find the colors within my avatar to implement into my branding. 
+
+Thankful for the feedback I received from Valerie and the folks from @TechByChoiceOrg. 
