@@ -1,118 +1,150 @@
-:root{
-/* Color Palette */
---white-purple: hsla(345, 40%, 92%, 0.764);
---pastel-lavender:#aba7de;
---lavender: #9f8ae4; 
---light-purple: #795ad7; 
---medium-purple: #4d30b1; 
---dark-purple: #432678; 
---darkest-purple: #29206b; 
---grey-purple: #413c6d; 
---black: #141411; 
+:root {
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /*~~~~~~ COLOR PALETTE ~~~~~~~~~~*/
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  --white-purple: #f2e3e8c3;
+  --pastel-lavender: #aba7de;
+  --lavender: #9f8ae4;
+  --light-purple: #795ad7;
+  --medium-purple: #4d30b1;
+  --dark-purple: #432678;
+  --darkest-purple: #29206b;
+  --grey-purple: #413c6d;
+  --black: #141411;
+  --text-shadow: rgba(41, 32, 107, 0.29);
 }
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~ UNIVERSAL ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * {
-  font-size: 62.5%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overscroll-behavior: none;
   scroll-behavior: smooth;
 }
+html {
+  font-size: 62.5%; /* font-size = 10px*/
+}
 
+body {
+  font-size: 1.6rem; /* font-size = 16px*/
+}
 html,
 body {
   background-image: url("../public/images/brand-background-01.png");
   background-position: center;
-  margin: 0 auto;
   min-height: 100vh;
 }
-/* AVATARS */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~ AVATAR ~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #avatar {
   border-radius: 50em;
-  height: 95em;
+  height: 10em;
   width: auto;
-  margin-top: 14%;
+  border: 3px inset var(--dark-purple)
+  /* margin-top: 26%; */
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~ TEXT ~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.name,
+.tagline {
+  color: var(--black);
+}
+.name {
+  padding: 2.5% 4%;
+
+  font-size: 6em;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-shadow: 4px 4px 3px var(--text-shadow);
+}
+.tagline {
+  font-family: "Varela Round", sans-serif;
+  font-size: 2em;
+  max-width: 600px;
+  text-align: center;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~ CONTAINERS ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header {
+  grid-area: hd;
+}
+/* this helps bring the background color to the top of the page */
+header,
+footer {
+  margin: 0 auto;
+  height: 5em;
+}
+.wrapper,
+footer {
+  background: url("../public/images/brand-background-01.png");
+  background-position: 10%;
+  backdrop-filter: saturate(6);
+  border: 2px outset var(--white-purple);
+}
+.wrapper {
+  margin: 0 auto;
+  height: 100vh;
+  width: 50%;
+  border-radius: 40px;
 }
 .bio-container {
-    grid-area: bc;
-    height: 30vh;
-    width: 100%;
-  }
-/* Text */
-h1, p {
-    color: var(--black);
+  grid-area: bc;
+  width: 100%;
 }
-h1{
-    padding: 2.5% 4%;
+.bio-container,
+.links-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.links-container {
+  grid-area: lc;
+}
+footer {
+  grid-area: ft;
+  margin-top: 6em;
+  padding: 10px;
+  height: 4rem;
+  font-size: 1.5rem;
+  color: var(--white-purple);
+  text-align: center;
+  position: sticky;
+  background-color: var(--darkest-purple);
+  border: none;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~ BUTTONS ~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-    font-size: 22em;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    text-shadow: 4px 4px 3px rgba(41, 32, 107, 0.29);
-}
-header, footer{
-margin: 0 auto;
-height: 5em;
-}
-footer{
-    grid-area: ft;
-    margin-top: 2em;
-    padding: 15px;
-    text-align: center;
-    background-color: var(--darkest-purple);
-    position: sticky;
-    height: 4rem;
-    color: var(--white-purple);
-    font-size: 1rem;
-}
-p{
-    font-family: 'Varela Round', sans-serif;
-    font-size: 6em;
-    text-align: center;
-}
-/* CONTAINERS */
-.wrapper{
-    background: url('../public/images/brand-background-01.png');
-    background-position: 10%;
-    opacity: .99;
-    border: 2px outset var(--white-purple);
-    border-radius: 40px;
-    width: 50%;
-    margin: 0 auto;
-    height: 95vh;
-}
-.bio-container, .links-container{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.links-container{
-    grid-area: lc;
-    height: 62vh;
-    width: 50%;
-}
-/* BUTTONS */
 button {
- font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 1.2em;
-  padding: 0.3em;
-  margin: 3.5em;
+  margin: 0.5em;
   text-decoration: none;
-  color: white;
-  height: 4vh;
+  height: 1em;
   width: 23vh;
+  color: white;
   background-color: var(--light-purple);
   border-radius: 6em;
-/* Boxshadow */
-box-shadow: 10px 10px 11px 6px rgba(41, 32, 91, 0.61);
-  -webkit-box-shadow: 10px 10px 11px 6px rgba(41, 32, 91, 0.61);
-  -moz-box-shadow: 10px 10px 11px 6px rgba(41, 32, 91, 0.61);
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /*~~~~~~~ BOX-SHADOW ~~~~~~~~~~~~~*/
+  /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  box-shadow: 10px 10px 11px 6px rgba(41, 32, 91, 20%);
+  -webkit-box-shadow: 10px 10px 11px 6px rgba(41, 32, 91, 20%);
+  -moz-box-shadow: 10px 10px 11px 6px rgba(41, 32, 91, 20%);
+}
+.social-text {
+  font-size: 14pt;
 }
 button:visited {
-    color: #aba7de;
+  color: #aba7de;
 }
 button:hover {
   background-color: var(--darkest-purple);
@@ -120,36 +152,94 @@ button:hover {
   transition: 0.5s;
   cursor: pointer;
 }
-
-/* Mobile First */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~ MEDIA QUERIES ~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~ MOBILE FIRST ~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (max-width: 600px) {
-    .wrapper {
-      display: grid;
-      height: 100vh;
-      text-align: center;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas:
-        "hd"
-        "bc"
-        "lc"
-        "ft";
-    }
-    #avatar{
-        margin: 0;
-    }
-    .bio-container{
-        padding: 0;
-        height: 136em;
-    }
-    h1{
-        font-size: 20pt;
-    }
-    .links-container{
-        padding: 0;
-        height: 114em;
-    }
-    button{
-        height: 75%;
-    }
+  .wrapper {
+    display: grid;
+    height: 50em;
+    width: 75%;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    grid-template-areas:
+      "hd"
+      "bc"
+      "lc"
+      "ft";
+  }
+  .bio-container {
+    height: 3em;
+  }
+  .name {
+    padding: 6% 4%;
+    font-size: 1.5em;
+  }
+  .tagline {
+    height: 1em;
+    font-size: 1em;
+    padding: 0 3.5%;
+  }
+  .top{
+    padding: 4%;
+    margin-bottom: 2%;
+  }
+  .social-text {
+    font-size: 10pt;
+  }
+  .bio-container,
+  .links-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  button {
+    height: 75%;
+  }
+  footer {
+    margin-top: 12%;
+  }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~ TABLETS ~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 600px) and (max-width: 768px) {
+  .wrapper {
+    height: 100vh;
+    width: 70%;
+  }
+  .tagline {
+    padding: 0 6%;
+  }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~ LAPTOPS ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 769px) and (max-width: 992px) {
+  .wrapper{
+    height: 115vh;
+    width: 75%;
+  }
+  .bio-container{
+    margin: 35px auto;
+  }
+  #avatar{
+    height: 15em;
+  }
+  .name {
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  button{
+    height: 3em;
+  }
+  .tagline{
+    padding: 6px 30px;
+  }
 }
