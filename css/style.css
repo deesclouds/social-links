@@ -152,36 +152,94 @@ button:hover {
   transition: 0.5s;
   cursor: pointer;
 }
-
-/* Mobile First */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~ MEDIA QUERIES ~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~ MOBILE FIRST ~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media only screen and (max-width: 600px) {
-    .wrapper {
-      display: grid;
-      height: 100vh;
-      text-align: center;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas:
-        "hd"
-        "bc"
-        "lc"
-        "ft";
-    }
-    #avatar{
-        margin: 0;
-    }
-    .bio-container{
-        padding: 0;
-        height: 136em;
-    }
-    h1{
-        font-size: 20pt;
-    }
-    .links-container{
-        padding: 0;
-        height: 114em;
-    }
-    button{
-        height: 75%;
-    }
+  .wrapper {
+    display: grid;
+    height: 50em;
+    width: 75%;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    grid-template-areas:
+      "hd"
+      "bc"
+      "lc"
+      "ft";
+  }
+  .bio-container {
+    height: 3em;
+  }
+  .name {
+    padding: 6% 4%;
+    font-size: 1.5em;
+  }
+  .tagline {
+    height: 1em;
+    font-size: 1em;
+    padding: 0 3.5%;
+  }
+  .top{
+    padding: 4%;
+    margin-bottom: 2%;
+  }
+  .social-text {
+    font-size: 10pt;
+  }
+  .bio-container,
+  .links-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  button {
+    height: 75%;
+  }
+  footer {
+    margin-top: 12%;
+  }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~ TABLETS ~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 600px) and (max-width: 768px) {
+  .wrapper {
+    height: 100vh;
+    width: 70%;
+  }
+  .tagline {
+    padding: 0 6%;
+  }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~ LAPTOPS ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 769px) and (max-width: 992px) {
+  .wrapper{
+    height: 115vh;
+    width: 75%;
+  }
+  .bio-container{
+    margin: 35px auto;
+  }
+  #avatar{
+    height: 15em;
+  }
+  .name {
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  button{
+    height: 3em;
+  }
+  .tagline{
+    padding: 6px 30px;
+  }
 }
