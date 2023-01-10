@@ -74,9 +74,10 @@ header {
   grid-area: hd;
 }
 /* this helps bring the background color to the top of the page */
-header,
+header{
+  height: 0.5em;
+}
 footer {
-  margin: 0 auto;
   height: 5em;
 }
 .wrapper,
@@ -95,6 +96,8 @@ footer {
 .bio-container {
   grid-area: bc;
   width: 100%;
+  display: flex;
+  flex-grow: 2;
 }
 .bio-container,
 .links-container {
@@ -106,6 +109,8 @@ footer {
 }
 .links-container {
   grid-area: lc;
+  display: flex;
+  flex-shrink: 1;
 }
 footer {
   grid-area: ft;
@@ -182,7 +187,7 @@ button:hover {
   .tagline {
     height: 1em;
     font-size: 1em;
-    padding: 0 3.5%;
+    padding: 3% 3.5%;
   }
   .top{
     padding: 4%;
@@ -202,7 +207,9 @@ button:hover {
     height: 75%;
   }
   footer {
-    margin-top: 12%;
+    margin-top: 1.5em;
+    padding-top: 6.5%;
+    min-height: 8em;
   }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -210,36 +217,161 @@ button:hover {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media (min-width: 600px) and (max-width: 768px) {
   .wrapper {
-    height: 100vh;
+    min-height: 95vh;
     width: 70%;
   }
+  #avatar{
+    margin-top: 8%;
+  }
+  .name{
+    margin: 2% 0 2% 0;
+    font-size: 2em;
+  }
   .tagline {
-    padding: 0 6%;
+    font-size: 1em;
+    padding: 0% 6%;
+  }
+  .links-container{
+    margin-top: 8%;
+  }
+  button{
+    margin-top: 4%;
+    height: 2em;
+  }
+  header{
+    height: 0.5em;
+  }
+  footer{
+    /* position: relative; */
+    margin-top: 3%;
+    height: 1em;
   }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*~~~~~~~~~~~ LAPTOPS ~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .wrapper{
-    height: 115vh;
+    height: 100vh;
     width: 75%;
   }
   .bio-container{
-    margin: 35px auto;
+    margin: 5% auto;
   }
   #avatar{
-    height: 15em;
+    height: 12em;
   }
   .name {
-    font-size: 5em;
+    font-size: 3em;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
+  }
+  .links-container{
+    margin-top: 1em;
+  }
+  .social-text{
+    font-size: 1.2em;
   }
   button{
-    height: 3em;
+    height: 3.5em;
+    width: 20em;
   }
   .tagline{
-    padding: 6px 30px;
+    padding: 0% 4%;
+    font-size: 2em;
   }
+  footer{
+      width: 100%;
+      font-size: 1.5em;
+    /* margin-top: 1em; */
+    height: 2em;
+    
+  }
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~ iPad Mini ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media (min-width: 768px) and (max-height: 1024px){
+  .wrapper{
+    height: 95vh;
+  }
+  #avatar{
+    height: 10em;
+  }
+  .bio-container{
+    margin: 40px auto;
+  }
+  .name{
+    font-size: 3em;
+  }
+  .tagline{
+    font-size: 1.2em;
+  }
+button{
+  height: 2.35em;
+  width: 14em;
+}
+.links-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~~ Surface Pro ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 912px) and (max-height: 1368px){
+  .wrapper{
+    height: 95vh;
+  }
+  #avatar{
+    height: 20em;
+  }
+  .bio-container{
+    margin: 40px auto;
+  }
+  .name{
+    font-size: 3em;
+  }
+  .tagline{
+    font-size: 1.2em;
+  }
+button{
+  height: 3.5em;
+  width: 18em;
+}
+.links-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~ LAPTOPS and LARGER SCREENS ~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media(min-width: 1024px) and (min-height: 600px){
+  .wrapper{
+    height: 100%;
+  }
+  #avatar{
+    height: 8em;
+  }
+  .bio-container{
+    margin: 40px auto;
+  }
+  .name{
+    font-size: 2em;
+  }
+  .tagline{
+    font-size: 1.2em;
+  }
+button{
+  height: 3em;
+  width: 16em;
+}
+.links-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+}
 }
