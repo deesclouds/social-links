@@ -24,7 +24,7 @@ html{
   font-size: 62.5%;
 }
 body{
-  background-image: url(assets/background.jpg);
+  background-image: url(../assets/background.jpg);
   /*Image by <a href="https://www.freepik.com/free-vector/gradient-network-connection-background_12643221.htm#query=technology%20background&position=6&from_view=search&track=ais">Freepik</a> */
   background-position: center;
   color: white;
