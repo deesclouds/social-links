@@ -1,5 +1,8 @@
 # Social Links
 
+<p align="center" width="800" height="600"><img src="https://user-images.githubusercontent.com/77818241/225765454-dd6588d6-417f-4533-8024-2bbc210213a7.png" alt="screenshot of social links site"/></p>
+
+
 ## Description: 
 This is a simple project that displays links to various social media profiles.
 Project is live [here](https://deesclouds-social-links.netlify.app/)
